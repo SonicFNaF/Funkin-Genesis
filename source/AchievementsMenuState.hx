@@ -28,6 +28,8 @@ class AchievementsMenuState extends MusicBeatState
 	private var descText:FlxText;
 
 	override function create() {
+		FlxG.sound.playMusic(Paths.music('awards'), 1, true);
+
 		#if desktop
 		DiscordClient.changePresence("Achievements Menu", null);
 		#end

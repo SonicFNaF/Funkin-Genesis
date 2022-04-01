@@ -51,6 +51,8 @@ class StoryMenuState extends MusicBeatState
 
 	override function create()
 	{
+		FlxG.sound.playMusic(Paths.music('story_mode'), 1, true);
+
 		Paths.clearStoredMemory();
 		Paths.clearUnusedMemory();
 

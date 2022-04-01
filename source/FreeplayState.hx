@@ -52,6 +52,8 @@ class FreeplayState extends MusicBeatState
 
 	override function create()
 	{
+		FlxG.sound.playMusic(Paths.music('freeplay'), 1, true);
+
 		Paths.clearStoredMemory();
 		Paths.clearUnusedMemory();
 		

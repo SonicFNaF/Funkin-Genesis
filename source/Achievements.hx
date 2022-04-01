@@ -26,7 +26,11 @@ class Achievements {
 		["Hyperactive",					"Finish a Song without going Idle.",				'hype',					false],
 		["Just the Two of Us",			"Finish a Song pressing only two keys.",			'two_keys',				false],
 		["Toaster Gamer",				"Have you tried to run the game on a toaster?",		'toastie',				false],
-		["Debugger",					"Beat the \"Test\" Stage from the Chart Editor.",	'debugger',				 true]
+		["100%",					    "Beat The End to 100% the mod.",	                'debugger',				 true],      
+		["The Speed of Light!",         "Beat Sonic's Week.",                               'sonic_nomiss',         false],
+		["You're trash lol. XD",        "Beat Pakistan Sonic's Week.",                      'pakistan_nomiss',      false],
+		["Fuck you SEGA!",              "Beat Haruki Satomi's Week.",                       'cybershell_nomiss',    false],
+		["100%",					    "Beat The End to 100% the mod.",	                'debugger',				false],
 	];
 	public static var achievementsMap:Map<String, Bool> = new Map<String, Bool>();
 
@@ -34,7 +38,7 @@ class Achievements {
 	public static function unlockAchievement(name:String):Void {
 		FlxG.log.add('Completed achievement "' + name +'"');
 		achievementsMap.set(name, true);
-		FlxG.sound.play(Paths.sound('confirmMenu'), 0.7);
+		FlxG.sound.play(Paths.sound('achievementSound'), 0.7);
 	}
 
 	public static function isAchievementUnlocked(name:String) {
